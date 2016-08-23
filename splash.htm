@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hi</title>
+    <!-- Get jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+    <script src="js/typed.js" type="text/javascript"></script>
+    
+	<style type="text/css">	
+			body {
+			 background-image: url("images/splash_background.jpg");
+			 background-repeat:no-repeat;
+			 background-size:cover;
+			}	
+			img{
+			z-index: 999;
+			position: relative;
+			
+			}
+			
+	</style>
+	
+	<script>
+	
+
+				 $(document).ready(function () { 
+						 
+						 $("#typer,#pic,#next").hide();
+						 $("#typer").delay(1500).fadeIn(0);
+						 $("#pic").delay(1000).fadeIn(200);
+						 $("#next").delay(10000).fadeIn(1500);
+						
+				 });
+
+			
+
+	
+    $(function(){
+
+        $("#typed").typed({
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 10,
+            backDelay: 600,
+            loop: false,
+            contentType: 'html', // or text
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+        });
+
+        $(".reset").click(function(){
+            $("#typed").typed('reset');
+        });
+
+    });
+
+    function newTyped(){ /* A new typed object */ }
+
+    function foo(){ console.log("Callback"); }
+
+    </script>
+	
+	
+	
+    <link href="css/typed.css" rel="stylesheet"/>
+	<link  href="css/particles.css"rel="stylesheet" />
+    <style>
+        
+    </style>
+</head>
+
+
+
+
+
+<body>
+     
+    	<!-- particles.js container -->
+		<div id="particles-js"></div>
+		<br><br><br><br><br><br><br><br><br><br>
+				<center><img id ="pic" src="images/ray.png"  width="128" height="128"></center>
+				<br><br>
+				<center><div id ="typer" class="wrap slideUp">
+				<div class="type-wrap">
+					<div id="typed-strings">
+					    <span>                    </span>
+						<span> <strong>Hi !</strong></span>
+						<p>I am <strong> Abhijit</strong></p>
+						<p><strong>Welcome to my website.</strong></p> 
+						 						
+					</div>
+					<span id="typed" style="white-space:pre;"></span>
+				</div>
+				</div></center>
+				
+				<br><br>
+		
+			<center><a href = "index.html"><img  id ="next" src="images/splash_progress.png"  width="50" height=auto ></a></center>
+
+		<div class="mdl-tooltip mdl-tooltip--large" for="next">
+			Take off !
+			</div>
+
+		<!-- scripts -->
+		<script src="js/particles.js"></script>
+		<script src="js/app_particles.js"></script>
+		<link rel="stylesheet" href="animations.css">
+
+
+	
+
+</body>
+</html>
